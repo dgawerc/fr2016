@@ -204,21 +204,19 @@ Thus, in addition to the HGC layer's center pixel detector, the analysis code wi
 
 \begin{figure*}[!htb]
 \centering
-	\includegraphics[width=0.49\textwidth]{AmpCut0.pdf}
-	\includegraphics[width=0.49\textwidth]{AmpCut1.pdf}
+	\includegraphics[width=0.49\textwidth]{PhotekAmp.pdf}
+	\includegraphics[width=0.49\textwidth]{PhotekAmpCut.pdf}
 	\caption{Pulse peak amplitude distribution for the Photek 240 MCP before and after the cut.
-		Non-positive amplitudes represent \textit{``bad''} events.
-		The $\sqrt{10}$ factor accounts for a 6 dB attenuator.}
+		Non-positive amplitudes represent \textit{``bad''} events.}
 	\label{fig:AmpCut}
 \end{figure*}
 
 \begin{figure*}[!htb]
 \centering
-	\includegraphics[width=0.49\textwidth]{ChargeCut0.pdf}
-	\includegraphics[width=0.49\textwidth]{ChargeCut1.pdf}
+	\includegraphics[width=0.49\textwidth]{PhotekCharge.pdf}
+	\includegraphics[width=0.49\textwidth]{PhotekChargeCut.pdf}
 	\caption{Pulse charge distribution for the Photek 240 MCP before and after the cut.
-		Zeroed charges represent events with only noise.
-		The $\sqrt{10}$ factor accounts for a 6 dB attenuator.}
+		Zeroed charges represent events with only noise.}
 	\label{fig:ChargeCut}
 \end{figure*}
 
@@ -457,8 +455,8 @@ Yet, the ring pixels initially had time resolutions near 70-80 ps, so they still
 	
 	\includegraphics[width=0.35\textwidth]{SKIROC_6_Pixels50.pdf}
 	\includegraphics[width=0.35\textwidth]{SKIROC_7_Pixels50.pdf}
-	\caption{Adding in pixels in decreasing events order.
-		Each has been smeared by 50 ps.}
+	\caption{Adding in pixels in decreasing events order, starting at the top left and going right then down.
+		Each pixel has been smeared by 50 ps.}
 	\label{fig:50psAll}
 \end{figure*}
 
@@ -481,7 +479,7 @@ Figure \ref{fig:50psAll} shows the addition of each smeared pixel using an equal
 \begin{minipage}[t]{.49\textwidth}
 	\centering
 	\includegraphics[width=\linewidth]{deltaTMCPSmear50.pdf}
-	\caption{TOF histogram for 45ps smeared Photonis.}
+	\caption{TOF histogram for 45 ps smeared Photonis.}
 	\label{fig:50p_MCP}
 \end{minipage}\hfill
 \begin{minipage}[t]{.49\textwidth}
