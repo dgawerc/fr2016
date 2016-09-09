@@ -33,7 +33,8 @@ The number of collisions per bunch crossing (pileup) will increase by one order 
 The CMS electromagnetic calorimeter (ECAL) is used to detect the energy of electrons and photons flying off from the collision.
 A possible solution to pileup obfuscation is to equip the new ECAL generation with precision timing capabilities.
 CMS has proposed a silicon-based High Granularity Calorimeter (HGC) to upgrade its current endcap ECAL.
-Each HGC layer has a hexagonal honeycomb lattice of pixel detectors. We present results from impinging 8-32 GeV electrons at the Fermilab Test Beam Facility using dedicated timing layers identical to the proposed CMS HGC but with an electronic readout capable of resolving time resolutions below 5 ps.
+Each HGC layer has a hexagonal honeycomb lattice of pixel detectors. 
+We present results from impinging 8-32 GeV electrons at the Fermilab Test Beam Facility using dedicated timing layers identical to the proposed CMS HGC but with an electronic readout capable of resolving time resolutions below 5 ps.
 When impinging 32 GeV electrons, we measure the device time resolution to be less than 15 ps and approximately 11 ps when combined with a similar layer positioned further down the beam line.
 \end{abstract}
 
@@ -316,7 +317,7 @@ Starting with the more basic (low-level) plots, Figure \ref{fig:center_MCP_104} 
 \centering
 	\includegraphics[width=.49\textwidth]{deltaTCenter104.pdf}
 	\includegraphics[width=.49\textwidth]{deltaTMCP104.pdf}
-	\caption{TOF histograms of HGC center pixel and of Photonis MCP-PMT.}
+	\caption{TOF histograms of HGC center pixel (left) and of Photonis MCP-PMT (right).}
 	\label{fig:center_MCP_104}
 \end{figure*}
 
@@ -331,7 +332,7 @@ Although the uncertainties in $\sigma$ are too large to be conclusive here, Figu
 	\includegraphics[width=.32\textwidth]{deltaTPicoSilEventCharge104.pdf}
 	\includegraphics[width=.32\textwidth]{deltaTPicoSilTotalCharge104.pdf}
 	\includegraphics[width=.32\textwidth]{deltaTPicoSilLandauCharge104.pdf}
-	\caption{TOF histograms of HGC pixels combined by event charge, total charge, and charge MPV.}
+	\caption{TOF histograms of HGC pixels combined by event charge (left), total charge (middle), and charge MPV (right).}
 	\label{fig:HGC_event_total_MPV_104}
 \end{figure*}
 
@@ -520,7 +521,7 @@ Already at a smearing of 50 ps, the equal weighting of all pixels within the HGC
 	\includegraphics[width=0.32\textwidth]{SKIROC_4_Pixels_NoCenter50.pdf}
 	\includegraphics[width=0.32\textwidth]{SKIROC_5_Pixels_NoCenter50.pdf}
 	\includegraphics[width=0.32\textwidth]{SKIROC_6_Pixels_NoCenter50.pdf}
-	\caption{Adding ring pixels in decreasing events order.
+	\caption{Adding ring pixels in decreasing events order, starting at the top-left and going right then down.
 		Each has been smeared by 50 ps.}
 	\label{fig:50psAll_NoCenter}
 \end{figure*}
@@ -606,7 +607,7 @@ However if the center pixel initially has a much better time resolution then the
 	\includegraphics[width=0.32\textwidth]{SKIROC_4_Pixels_NoCenter500.pdf}
 	\includegraphics[width=0.32\textwidth]{SKIROC_5_Pixels_NoCenter500.pdf}
 	\includegraphics[width=0.32\textwidth]{SKIROC_6_Pixels_NoCenter500.pdf}
-	\caption{Adding ring pixels in decreasing events order.
+	\caption{Adding ring pixels in decreasing events order, starting from the top-left and going right then down.
 		Each has been smeared by 500 ps.}
 	\label{fig:500psAll_NoCenter}
 \end{figure*}
@@ -675,9 +676,9 @@ However, if a TOF from the HGC layer to the Photonis increases significantly fro
 
 \begin{figure}[!htbp]
 \centering
-	\includegraphics[width=\linewidth]{deltaT_PicoSil_vs_MCP_TotalCharge_16gev.pdf}
+	\includegraphics[width=\linewidth]{deltaT_PicoSil_vs_MCP_TotalCharge144.pdf}
     
-	\includegraphics[width=\linewidth]{deltaT_PicoSil_vs_MCP_TotalCharge_16gevDelay.pdf}
+	\includegraphics[width=\linewidth]{deltaT_PicoSil_vs_MCP_TotalCharge186.pdf}
 	\caption{The TOF histograms from the HGC layer to the Photonis for 16 GeV electron beams.
 	The pixel TOF values were combined with total charge weighting.
 	The top plot has 6 $X_0$ of tungsten absorber in front of the HGC layer.
@@ -712,7 +713,7 @@ Table \ref{table:vs} has the new TOF $\sigma$ values for most of the runs in Tab
 \\ \hline
 32 & 6 & 1 & W & 0 & 17.9 ps & 18.7 ps
 \\ \hline
-16 & 6 & 1 & W & 0 & 25.0  ps & 24.7 ps
+16 & 6 & 1 & W & 0 & 25.0  ps & 24.8 ps
 \\ \hline
 16 & 3 & 1 & W & 3 & 39.8 ps & 41.5 ps
 \\ \hline
