@@ -166,24 +166,16 @@ This improvement is due to the combination of non-overlapping information about 
 \end{minipage}
 \end{figure}
 
-% The following 2 plots are actually a bit out of date, and were combined with slightly
-% different versions of the two above plots. Main point is still correct. Would need to
-% update the below plots for any final paper.
 \begin{figure}[!htb]
-%\centering
-%\begin{minipage}[t]{.49\linewidth}
 	\centering
 	\includegraphics[width=\linewidth]{deltaTSiPad.pdf}
 	\caption{TOF of the Silicon Pad while impinging 32 GeV electrons with 6 $X_0$ Pb in front of the silicon layer.}
 	\label{fig:SiPad}
-%\end{minipage} \hfill
-%\begin{minipage}[t]{.49\linewidth}
 
 \centering
 	\includegraphics[width=\linewidth]{deltaT_Center_MCP_SiPad_TotalCharge.pdf}
 	\caption{TOF of the HGC Center Pixel, Photonis, and Silicon Pad combined using total charge weighting, while impinging 32 GeV electrons with 6 $X_0$ Pb in front of the silicon layer.}
 	\label{fig:wctc}
-%\end{minipage}
 \end{figure}
 
 Because there are also multiple devices along the beam line as well as multiple HGC pixels, the analysis of the coplanar HGC pixels has been called \textit{transverse analysis}, and the analysis of multiple devices \textit{longitudinal analysis}. 
@@ -312,8 +304,9 @@ In order to show results in the simplest manner, this section will only use plot
 Specifically, the results in this section will all be for runs that have a 32 GeV electron test beam, and a tungsten (W) absorber 1mm in front of the HGC layer (it may help to recall the setup from Figure \ref{fig:setup}).
 
 Starting with the more basic (low-level) plots, Figure \ref{fig:center_MCP_104} contains the TOF histograms for the HGC center pixel and Photonis MCP-PMT.
+Figure \ref{fig:ringpixel} contains the TOF histogram for a typical ``ring pixel'' surrounding the center HGC pixel.
 
-\begin{figure*}%[h]
+\begin{figure*}[!htbp]
 \centering
 	\includegraphics[width=.49\textwidth]{deltaTCenter104.pdf}
 	\includegraphics[width=.49\textwidth]{deltaTMCP104.pdf}
@@ -321,13 +314,20 @@ Starting with the more basic (low-level) plots, Figure \ref{fig:center_MCP_104} 
 	\label{fig:center_MCP_104}
 \end{figure*}
 
+\begin{figure}[!htbp]
+\centering
+	\includegraphics[width=\linewidth]{deltaTPicoSilPixel4.pdf}
+    \caption{A typical ring pixel TOF histogram. The $\sigma$ is much bigger than for the center pixel. The configuration involves a 32 GeV electron beam, with 6 $X_0$ of W absorber.}
+    \label{fig:ringpixel}
+\end{figure}
+
 In order to see how the time resolution improves when adding in the ring pixels, Figure \ref{fig:HGC_event_total_MPV_104} contains different charge-based weighting methods. 
 Equal weighting is not used here because the center pixel has more events and a better time resolution than the other pixels, so it should be weighted more heavily. 
 The center pixel has a better time resolution because the beam is focused on it, which increases the number of events and thus the signal-to-noise ratio. 
 For all combinations in Figure \ref{fig:HGC_event_total_MPV_104} there is a decrease in $\sigma$ (from 15.9 ps in Figure \ref{fig:center_MCP_104}) and thus an improvement in the time resolution. 
 Although the uncertainties in $\sigma$ are too large to be conclusive here, Figure \ref{fig:HGC_event_total_MPV_104} suggests that the event charge weighting is the worst of the 3 methods.
 
-\begin{figure*}[!htbp]
+\begin{figure*}[p]
 \centering
 	\includegraphics[width=.32\textwidth]{deltaTPicoSilEventCharge104.pdf}
 	\includegraphics[width=.32\textwidth]{deltaTPicoSilTotalCharge104.pdf}
@@ -409,7 +409,27 @@ This statement is tested below.
 
 Note that the time resolution values and their relative sizes given in the plots above are for this specific configuration.
 Analyzing other runs will lead to changes in these values. 
+Figure \ref{fig:resplot} plots the time resolution as a function of beam energy for this configuration, using the HGC MPV weighting, combined equally with the Photonis.
 The absorber thickness, distance, type, and the beam energy contribute to the varying values of $\sigma$.
+The direct relationship between deposited charge and electron beam energy is shown in Figure \ref{fig:chargemean}.
+
+\begin{figure}
+\centering
+	\includegraphics[width=\linewidth]{resplot.pdf}
+    \caption{Time Resolution of the HGC Layer (MPV-weighted) with the Photonis vs Electron Beam Energy.
+    There is 6 $X_0$ W immediately in front of the setup.
+    }
+    \label{fig:resplot}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+	\includegraphics[width=\linewidth]{chargemean.pdf}
+    \caption{The Gaussian mean of the center pixel charge distribution vs the beam energy.
+    The Landau charge distribution of the ring pixels have much lower charge values, and were cut out of the calculation.
+    6 $X_0$ W was placed directly in front of the setup.}
+    \label{fig:chargemean}
+\end{figure}
 
 \section{SKIROC2 Emulation}
 For calorimetry at CMS, the SKIROC2 ASIC is a 64-channel front-end chip that reads out silicon PIN diodes.
@@ -510,6 +530,15 @@ For comparison, Figures \ref{fig:50ps_HGCMPV} and \ref{fig:50ps_HGCMPV_MCP} show
 Both detectors have been smeared by the same amounts as in Figures \ref{fig:50p_MCP} and \ref{fig:50ps_HGCequal_MCP}.
 Charge MPV weighting is used because it is one of the better charge-weighting methods (versus event, total charge). 
 Already at a smearing of 50 ps, the equal weighting of all pixels within the HGC layer appears to be slightly better than the charge MPV weighting, both for the HGC histogram and the HGC-Photonis histogram. 
+
+\begin{figure}[!htbp]
+\centering
+	\includegraphics[width=\linewidth]{resplotsmear.pdf}
+    \caption{The Time Resolution of the 50 ps Smeared Photonis and HGC Layer (with all pixels combined equally), Weighted 50-50 vs Beam Energy. }
+    \label{fig:resplotsmear}
+\end{figure}
+
+In Figure \ref{fig:resplotsmear}, the combined time resolution (after smearing 50 ps) is plotted against different beam energies. The time resolutions are obtained the same way as in Figure \ref{fig:50ps_HGCequal_MCP}, which is the most effective combination.
 
 \subsubsection{Add Pixels Individually: Exclude Center Pixel}
 \begin{figure*}[!htbp]
